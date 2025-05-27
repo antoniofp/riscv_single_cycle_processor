@@ -18,7 +18,6 @@ module alu(
 	end
 	
 	// la señal zero se activa cuando el resultado es cero
-	// se usa principalmente para branches (beq, bne)
 	assign zero = (result == 32'b0);
 	
 endmodule

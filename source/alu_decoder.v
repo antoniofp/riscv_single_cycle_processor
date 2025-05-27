@@ -1,7 +1,7 @@
 module alu_decoder(
 	input [1:0] alu_op,
 	input [2:0] funct3,
-	input op5,
+	input op_5,
 	input funct7_5,
 	output reg [2:0] alu_control
 );
@@ -14,8 +14,8 @@ module alu_decoder(
 			2'b10: begin
 				case(funct3)
 					3'b000: begin
-						// concatenamos op5 y funct7_5 para distinguir entre add y sub
-						if ({op5, funct7_5} == 2'b11)
+						// concatenamos op_5 y funct7_5 para distinguir entre add y sub
+						if ({op_5, funct7_5} == 2'b11)
 							alu_control = 3'b001; // resta (sub)
 						else
 							alu_control = 3'b000; // suma (add)

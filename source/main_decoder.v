@@ -1,10 +1,9 @@
 module main_decoder(
-	input clk,
 	input [6:0] op,
 	output reg branch, jump, mem_write, alu_src, reg_write,
 	output reg [1:0] result_src, imm_src, alu_op
 );
-	always @(posedge clk)
+	always @(*)
 	begin
 		case(op)
 			7'b0000011: // op = 3: lw

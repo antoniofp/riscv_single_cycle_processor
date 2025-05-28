@@ -1,4 +1,4 @@
-module main(
+module top(
 	input clk
 );
 

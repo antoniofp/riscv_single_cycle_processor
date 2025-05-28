@@ -16,7 +16,6 @@ module control_unit(
 	
 	// instancia del decodificador principal
 	main_decoder md(
-		.clk(clk),
 		.op(op),
 		.branch(branch),
 		.jump(jump),
@@ -32,7 +31,7 @@ module control_unit(
 	alu_decoder ad(
 		.alu_op(alu_op),
 		.funct3(funct3),
-		.op5(op[5]),
+		.op_5(op[5]),
 		.funct7_5(funct7_5),
 		.alu_control(alu_control)
 	);

@@ -112,13 +112,8 @@ module main(
 	assign src_a = rd1;
 	
 	// mux para seleccionar el resultado a escribir en el register file
-	always @(*) begin
-		case(result_src)
-			2'b00: result = alu_result;	
-			2'b01: result = read_data;	// data from data memory
-			2'b10: result = pc_plus4;		
-			default: result = alu_result;	
-		endcase
-	end
+	assign result = (result_src == 2'b00) ? alu_result :
+						(result_src == 2'b01) ? read_data :
+						(result_src == 2'b10) ? pc_plus4 : alu_result;
 
 endmodule

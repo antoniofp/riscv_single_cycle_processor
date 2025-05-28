@@ -16,7 +16,7 @@ module main(
 	// señales del register file
 	wire [31:0] rd1, rd2, result;
 	
-	// señales del immediate extend
+	// señal del immediate extend
 	wire [31:0] imm_ext;
 	
 	// señales de la alu
@@ -26,7 +26,7 @@ module main(
 	// señales de la memoria de datos
 	wire [31:0] read_data;
 	
-	// ========== instancias de módulos ==========
+	// oa asi a instanciar
 	
 	// program counter
 	program_counter pc_reg(
@@ -115,7 +115,7 @@ module main(
 	always @(*) begin
 		case(result_src)
 			2'b00: result = alu_result;	
-			2'b01: result = read_data;		
+			2'b01: result = read_data;	// data from data memory
 			2'b10: result = pc_plus4;		
 			default: result = alu_result;	
 		endcase

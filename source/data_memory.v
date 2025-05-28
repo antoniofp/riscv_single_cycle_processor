@@ -1,6 +1,6 @@
 module data_memory(
-	input wire clk,				// señal de reloj
-	input wire we,				// write enable (mem_write del control unit)
+	input wire clk,				
+	input wire we,				// write enable (mem_write del control unit dumbas)
 	input wire [31:0] addr,		// dirección de memoria
 	input wire [31:0] wd,		// datos a escribir (write data)
 	output wire [31:0] rd		// datos leídos (read data)

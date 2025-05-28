@@ -1,8 +1,8 @@
 module alu(
-	input [31:0] src_a,			// primer operando
-	input [31:0] src_b,			// segundo operando
-	input [2:0] alu_control,	// señal de control de la alu
-	output reg [31:0] result,	// resultado de la operación
+	input [31:0] src_a,			
+	input [31:0] src_b,		
+	input [2:0] alu_control, // pueden ser: 000 (suma), 001 (resta), 010 (and), 011 (or), 101 (set less than)
+	output reg [31:0] result,	
 	output zero					// flag que indica si el resultado es cero
 );
 
@@ -13,7 +13,7 @@ module alu(
 			3'b010: result = src_a & src_b;						// and lógico
 			3'b011: result = src_a | src_b;						// or lógico
 			3'b101: result = (src_a < src_b) ? 32'b1 : 32'b0;	// set less than (comparación con signo)
-			default: result = 32'b0;							// caso por defecto
+			default: result = 32'b0;							
 		endcase
 	end
 	

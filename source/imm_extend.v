@@ -1,5 +1,6 @@
 module imm_extend(
-	input [31:7] instr,			// bits 31 a 7 de la instrucción 
+	input [31:7] instr,			// bits 31 a 7 de la instrucción, está bien cool porque los bits se mantienen en la misma posición
+								// y no tengo que hacer malabares mentales (restarle 7 a la posición real) para hacer el slicing aquí
 	input [1:0] imm_src,		// selector del tipo de inmediato
 	output reg [31:0] imm_ext	// inmediato extendido a 32 bits
 );

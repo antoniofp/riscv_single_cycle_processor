@@ -1,9 +1,9 @@
 module register_file(
-	input wire clk,					// reloj del sistema
-	input wire we3,					// write enable del puerto 3 (escritura)
+	input wire clk,					
+	input wire we3,					// write enable del puerto 3 (el puerto 3 es el a3)
 	input wire [4:0] a1, a2, a3,	// direcciones de los registros (5 bits = 32 registros)
 	input wire [31:0] wd3,			// write data del puerto 3 (datos a escribir)
-	output wire [31:0] rd1, rd2		// read data de los puertos 1 y 2 (datos leídos)
+	output wire [31:0] rd1, rd2		//datos leídos de las direcciones a1 y a2
 );
 
 	// banco de 32 registros de 32 bits cada uno

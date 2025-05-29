@@ -1,5 +1,6 @@
 module top(
-	input clk
+	input clk,
+	input reset		
 );
 
 	// señales del program counter
@@ -31,6 +32,7 @@ module top(
 	// program counter
 	program_counter pc_reg(
 		.clk(clk),
+		.reset(reset),		// nueva conexión
 		.pc_next(pc_next),
 		.pc(pc)
 	);

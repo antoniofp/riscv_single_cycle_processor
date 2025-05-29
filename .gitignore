@@ -21,13 +21,13 @@ simulation/
 *.vstf
 
 # ModelSim/QuestaSim files
-*.mpf
-*.mti
-vsim.wlf
+#*.mpf
+#*.mti
+#vsim.wlf
 transcript
-*.wlf
+#*.wlf
 work/
-modelsim.ini
+#modelsim.ini
 
 # Compilation output
 output_files/

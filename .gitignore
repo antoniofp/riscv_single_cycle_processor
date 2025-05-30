@@ -24,9 +24,9 @@ simulation/
 #*.mpf
 #*.mti
 #vsim.wlf
-transcript
+#transcript
 #*.wlf
-work/
+#work/
 #modelsim.ini
 
 # Compilation output

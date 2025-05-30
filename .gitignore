@@ -16,9 +16,9 @@
 db/
 incremental_db/
 work/
-simulation/
-*.wlf
-*.vstf
+#simulation/
+#*.wlf
+#*.vstf
 
 # ModelSim/QuestaSim files
 #*.mpf
